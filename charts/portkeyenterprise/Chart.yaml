@@ -1,6 +1,6 @@
 apiVersion: v2
 name: portkeyenterprise
-description: A Helm chart for Kubernetes
+description: Deploy Portkey Enterprise on F5 App Stack
 
 # A chart can be either an 'application' or a 'library' chart.
 #
