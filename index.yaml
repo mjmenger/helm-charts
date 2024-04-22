@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  portkeyenterprise:
+  - apiVersion: v2
+    appVersion: 1.1.1
+    created: "2024-04-22T20:21:55.037741384Z"
+    description: A Helm chart for Kubernetes
+    digest: 30f01065b418699f1cf99e0907436fa5654f145b076a9dcad62e5d00a7304113
+    name: portkeyenterprise
+    type: application
+    urls:
+    - https://github.com/mjmenger/helm-charts/releases/download/portkeyenterprise-0.1.0/portkeyenterprise-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-04-22T20:21:55.037751974Z"
