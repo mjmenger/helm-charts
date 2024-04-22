@@ -3,6 +3,16 @@ entries:
   portkeyenterprise:
   - apiVersion: v2
     appVersion: 1.1.1
+    created: "2024-04-22T23:40:27.020768697Z"
+    description: Deploy Portkey Enterprise on F5 App Stack
+    digest: d4153c9da0f4bd3b2bc2a4730d910f90e27d435f37c4f484deb51ec2a2e12f49
+    name: portkeyenterprise
+    type: application
+    urls:
+    - https://github.com/mjmenger/helm-charts/releases/download/portkeyenterprise-0.1.7/portkeyenterprise-0.1.7.tgz
+    version: 0.1.7
+  - apiVersion: v2
+    appVersion: 1.1.1
     created: "2024-04-22T23:04:43.021279755Z"
     description: Deploy Portkey Enterprise on F5 App Stack
     digest: 3bb6bb1899322773d74d30bc619bd0b440b22fdc146a2cc13a1c1a8511bb3b65
@@ -71,4 +81,4 @@ entries:
     urls:
     - https://github.com/mjmenger/helm-charts/releases/download/portkeyenterprise-0.1.0/portkeyenterprise-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-22T23:04:43.02131498Z"
+generated: "2024-04-22T23:40:27.020802791Z"
