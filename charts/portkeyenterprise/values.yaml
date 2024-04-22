@@ -14,6 +14,8 @@ imagePullSecrets: [portkeyenterpriseregistrycredentials]
 nameOverride: ""
 fullnameOverride: ""
 
+imageCredentials:
+
 environment:
   # Specify whether environment configuration should be deployed
   create: true
