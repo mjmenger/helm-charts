@@ -18,7 +18,7 @@ To uninstall the chart:
     helm delete my-releasename
 
 ## Create a file with configuration parameters
-In this example, it is saved as `environment.yaml`
+In this example, it is saved as `env.yaml`. These are values you receive from portkey.ai.
 ```yaml
 environment:
   create: true
@@ -44,7 +44,20 @@ you can find the latest version of the environment inputs by using `helm show va
 ## Create dry-run manifest
 change the name `example` as appropriate for your release
 ```shell
-helm install -n portkeyenterprise --dry-run=client example mjmenger/portkeyenterprise -f ./environment.yaml
+helm install -n portkeyenterprise --dry-run=client example mjmenger/portkeyenterprise -f ./env.yaml
+```
+
+## Disable configuration environment variables
+In this example, it is saved as `noenv.yaml`
+```yaml
+environment:
+  create: false
+```
+
+## Create dry-run manifest
+change the name `example` as appropriate for your release
+```shell
+helm install -n portkeyenterprise --dry-run=client example mjmenger/portkeyenterprise -f ./noenv.yaml
 ```
 
 ## Apply helm chart
