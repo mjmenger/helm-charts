@@ -39,6 +39,31 @@ environment:
     REDIS_URL: redis://redis:6379
     SERVICE_NAME: abc
 ```
+and add image pull credentials
+```yaml
+imageCredentials:
+- name: portkeyenterpriseregistrycredentials
+  create: true
+  registry: quay.io
+  username: someone
+  password: sillyness
+  email: someone@host.com
+- name: anothercredential
+  create: true
+  registry: quay.io
+  username: someone
+  password: sillyness
+  email: someone@host.com
+```
+if the credential secrets have already been created in the target namespace
+```yaml
+imageCredentials:
+- name: portkeyenterpriseregistrycredentials
+  create: false
+- name: anothercredential
+  create: false
+```
+
 you can find the latest version of the environment inputs by using `helm show values mjmenger/portkeyenterprise`
 
 ## Create dry-run manifest
