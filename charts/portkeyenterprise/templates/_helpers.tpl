@@ -70,3 +70,25 @@ Create the image pull credentials
 {{- printf "{\"auths\":{\"%s\":{\"username\":\"%s\",\"password\":\"%s\",\"email\":\"%s\",\"auth\":\"%s\"}}}" .registry .username .password .email (printf "%s:%s" .username .password | b64enc) | b64enc }}
 {{- end }}
 {{- end }}
+
+
+
+{{/*
+Common labels
+*/}}
+{{- define "redis.labels" -}}
+helm.sh/chart: {{ include "portkeyenterprise.chart" . }}
+{{ include "redis.selectorLabels" . }}
+{{- if .Chart.AppVersion }}
+app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
+{{- end }}
+app.kubernetes.io/managed-by: {{ .Release.Service }}
+{{- end }}
+
+{{/*
+Selector labels
+*/}}
+{{- define "redis.selectorLabels" -}}
+app.kubernetes.io/name: redis
+app.kubernetes.io/instance: {{ .Release.Name }}
+{{- end }}
